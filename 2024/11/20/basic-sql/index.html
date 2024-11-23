@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!--Description-->
+
+
+
+    <meta name="description" content="說明
+因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。
+
+
+    #mark {
+        color: #FF7575;
+    }
+
+
+SQL的資料定義語言定義一個資料表
+1CREATE TABLE
+
+欄位：欄位名稱和欄位定義域
+INT：整數，範圍"/>
+
+
+<!--Author-->
+
+    <meta name="author" content="Yu-Zhang, Chen"/>
+
+
+<!--Open Graph Title-->
+
+    <meta property="og:title" content="基本的SQL語法"/>
+
+
+<!--Open Graph Description-->
+
+    <meta property="og:description" content="說明
+因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。
+
+
+    #mark {
+        color: #FF7575;
+    }
+
+
+SQL的資料定義語言定義一個資料表
+1CREATE TABLE
+
+欄位：欄位名稱和欄位定義域
+INT：整數，範圍"/>
+
+
+<!--Open Graph Site Name-->
+    <meta property="og:site_name" content="YuZhang的筆記"/>
+
+<!--Type page-->
+
+    <meta property="og:type" content="article"/>
+
+
+<!--Page Cover-->
+
+
+    <meta property="og:image" content="https://github.com/img/home-bg.jpg"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+
+
+
+    <meta name="twitter:image" content="https://github.com/img/home-bg.jpg"/>
+
+
+<!-- Title -->
+
+<title>基本的SQL語法 | YuZhang的筆記</title>
+
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<!-- Custom Fonts -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" />
+<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" />
+<link href="//fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Gallery -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/featherlight@1.4.0/src/featherlight.css" integrity="sha256-30DV/STftlyQ6v8yaOWlabammvCYtRJERLj/m0b3zno=" crossorigin="anonymous">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/css/lightgallery.min.css">
+
+<!-- favicon -->
+
+<link rel="icon" href="/img/favicon.png"/>
+
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- Head tag -->
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top bg-transparent position-absolute w-100 p-0" id="nav">
+    <div class="container pl-0 pr-0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand text-white p-1 pl-3" href="/">YuZhang的筆記</a>
+        </div>
+        <div class="navbar-nav float-right">
+            <button class="btn btn-link search-btn navbar-item" data-toggle="modal" data-target="#searchModal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="post-heading text-white">
+                    <h1>基本的SQL語法</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Main Content -->
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                
+                    <span class="meta d-inline-block">
+    
+        <i class="far fa-bookmark fa-fw"></i>
+        
+
+<a href="/categories/%E8%B3%87%E6%96%99%E5%BA%AB/">資料庫</a>
+
+    
+    
+    <!-- Date -->
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-calendar-check fa-fw"></i>
+        2024-11-20
+    
+    <!-- word count and read count -->
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-file-word fa-fw"></i>
+        1.3k
+    
+
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-clock fa-fw"></i>
+        5 Minutes
+    
+
+    
+</span>  
+                
+                <h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
+<p>因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。</p>
+</blockquote>
+<style>
+    #mark {
+        color: #FF7575;
+    }
+</style>
+
+<h5 id="SQL的資料定義語言"><a href="#SQL的資料定義語言" class="headerlink" title="SQL的資料定義語言"></a>SQL的資料定義語言</h5><p><strong>定義一個資料表</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>欄位：欄位名稱和欄位定義域<ul>
+<li>INT：整數，範圍在[$2^{-31}$-1,  $2^{31}$]</li>
+<li>DECIMAL(i, j)：有小數點的實數，i為數字長度，j為小數點後幾位</li>
+<li>CHAR(n)：字串欄位，長度固定為n</li>
+<li>VARCHAR(n)：也是字串欄位，長度<span id='mark'>最長為n</span></li>
+<li>BIT(n)：位元欄位，長度固定為n</li>
+<li>VARBIT(n)：也是位元欄位，長度<span id='mark'>最長為n</span></li>
+<li>DATE：日期欄位，預設為yyyy-mm-dd</li>
+<li>TIME：時間欄位，預設為hh:mm:ss</li>
+<li>DATETIME：日期加上時間欄位</li>
+<li>BLOB：儲存大型二元型態物件</li>
+<li>CLOB：儲存大型的文字檔</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表示SALE_TYPE定義域的合法值為大於<span class="number">100</span>的整數</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> DOMAIN SALE_TYPE <span class="type">INT</span></span><br><span class="line">    <span class="keyword">CHECK</span> (SALE_TYPE <span class="operator">&gt;</span> <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>完整限制：<ul>
+<li>NOT NULL：不能為空值</li>
+<li>DEFAULT：設定預設值<blockquote>
+<p>上面兩項可以在定義欄位時一起設定</p>
+</blockquote>
+</li>
+<li>PRIMARY KEY：資料表的主鍵</li>
+<li>UNIQUE：該欄位值為唯一，通常用來設定<span id='mark'>次要鍵</span></li>
+<li>FOREIGN KEY；用來外部鍵</li>
+</ul>
+</li>
+</ol>
+<p>為了維護參考完整限制，在創建資料表時可以設定外部鍵的處理方式，如果沒有設定的話，預設做法為不可刪除或修改</p>
+<hr>
+<p><em>刪除資料表定義</em></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span></span><br></pre></td></tr></table></figure>
+<p>刪除資料表定義以後紀錄也會一併刪除</p>
+<p>SQL語法允許在刪除資料表定義時設定該如何處理參考</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Product RESTRICT</span><br><span class="line"># product沒被參考到時，該資料表才可刪除</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Product CASCADE</span><br><span class="line"># Product會被刪除，在其他資料表中參考Product的定義也一併刪除</span><br></pre></td></tr></table></figure>
+<p><strong>預設的處理方式為RESTRICT</strong></p>
+<hr>
+<p><strong>修改資料表定義</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span></span><br></pre></td></tr></table></figure>
+<p>資料表定義包括<span id='mark'>欄位定義</span>與<span id='mark'>完整限制</span></p>
+<ul>
+<li><p>欄位定義</p>
+<ol>
+<li><p>新增欄位定義</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">Member</span> <span class="keyword">ADD</span> degree <span class="type">VARCHAR</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>刪除欄位定義</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">Member</span> <span class="keyword">DROP</span> address CASCADE;</span><br></pre></td></tr></table></figure></li>
+<li><p>修改欄位定義</p>
+<p> 假設要將Order資料表中的amount欄位的預設值修改成100</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">Order</span> <span class="keyword">ALTER</span> amount <span class="keyword">DROP</span> <span class="keyword">DEFAULT</span>;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">Order</span> <span class="keyword">ALTER</span> amount <span class="keyword">SET</span> <span class="keyword">DEFAULT</span> <span class="number">100</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>完整限制</p>
+<p>  如果一個完整限制將來<span id='mark'>有可能</span>被修改，則在CREATE TABLE時應該給一個名稱<br><br>  假設Product有一個完整限制叫UnitPrice_Check，若要取消語意完整限制</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Product <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> UnitPrice_Check;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>若想修改外部鍵的限制，可以先將現有限制刪除，再加入新的限制  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Browse <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> mIdFK;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Browse <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> NewMIdFK;</span><br><span class="line">    <span class="keyword">FOREIGN</span> KEY (mId) <span class="keyword">REFERENCES</span> <span class="keyword">Member</span>(mId)</span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> CASCADE <span class="keyword">ON</span> <span class="keyword">UPDATE</span> CASCADE;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="基本的SQL語法"><a href="#基本的SQL語法" class="headerlink" title="基本的SQL語法"></a>基本的SQL語法</h5><p>SQL查詢句基本格式如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">&lt;</span>屬性串列<span class="operator">&gt;</span> <span class="keyword">FROM</span> <span class="operator">&lt;</span>資料表串列<span class="operator">&gt;</span> <span class="keyword">WHERE</span> <span class="operator">&lt;</span>條件<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>範例：找出所有定價超過500的商品之編號、名稱與定價</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> pNo, pName, unitPrice</span><br><span class="line"><span class="keyword">FROM</span> Product</span><br><span class="line"><span class="keyword">WHERE</span> unitPrice <span class="operator">&gt;</span> <span class="number">500</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>別名</strong>：<br>SQL允許在FROM中使用<span id='mark'>AS</span>來指定資料表的別名</p>
+<p><strong>星號</strong>：<br>取出資料表的所有欄位</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Product;</span><br></pre></td></tr></table></figure>
+
+<p>如果一個查詢句沒有WHERE，代表沒有條件設限</p>
+<p>找出所有會員的編號及姓名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mId, name</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span>;</span><br></pre></td></tr></table></figure>
+
+<p>根據SQL的規定，重複的紀錄會被保留，如果要刪除重複的紀錄，可以用DISTINCT表達</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> name</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>比較運算子與LIKE</strong></p>
+<ul>
+<li>IS NULL<br>  找出沒有提供身份證字號的會員編號與姓名  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mId, name</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span></span><br><span class="line"><span class="keyword">WHERE</span> pId <span class="keyword">IS</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure></li>
+<li>LIKE<br>  找出住址含有高雄市的所有會員  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span></span><br><span class="line"><span class="keyword">WHERE</span> address <span class="keyword">LIKE</span> &quot;%高雄市%&quot;</span><br></pre></td></tr></table></figure>
+
+  找出所有女性會員  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span></span><br><span class="line"><span class="keyword">WHERE</span> pId <span class="keyword">LIKE</span> &quot;_2%&quot;</span><br></pre></td></tr></table></figure>
+
+  %代表任意字串<br>  _代表一個任意字元</li>
+</ul>
+<hr>
+<p><strong>其他</strong><br>SQL中的紀錄是有次序的，如果需要按照某一欄的大小排序，可使用ORDER BY</p>
+<p>姓名由大到小排列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mId, pId, name</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> name <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+<p>DESC代表由大到小(Descending)，ASC代表由小到大(Ascending)，預設為ASC</p>
+<hr>
+<h5 id="SQL的更新語法"><a href="#SQL的更新語法" class="headerlink" title="SQL的更新語法"></a>SQL的更新語法</h5><p><strong>新增語法</strong></p>
+<p>新增一筆紀錄至一個資料表的語法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span><span class="operator">&lt;</span>資料表名稱<span class="operator">&gt;</span>[<span class="operator">&lt;</span>欄位串列<span class="operator">&gt;</span>]</span><br><span class="line"><span class="keyword">VALUES</span> (欄位串列值);</span><br></pre></td></tr></table></figure>
+
+<p>新增一筆完整的紀錄到Product資料表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Product</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;b00001&#x27;</span>,<span class="string">&#x27;資料庫管理與系統&#x27;</span>, <span class="number">700</span>,<span class="string">&#x27;Book&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>新增一筆只含商品編號和商品名稱的紀錄到Product資料表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Product(pName, pNo)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;資料庫管理與系統&#x27;</span>, <span class="string">&#x27;b00001&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改語法</strong></p>
+<p>修改資料表中某些紀錄的某些欄位值的語法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="operator">&lt;</span>資料表名稱<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">SET</span><span class="operator">&lt;</span>欄位名稱<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>欄位值<span class="operator">&gt;</span>, <span class="operator">&lt;</span>欄位名稱<span class="operator">&gt;</span> <span class="operator">=</span> <span class="operator">&lt;</span>欄位值<span class="operator">&gt;</span> , ...</span><br><span class="line"><span class="keyword">WHERE</span> 條件;</span><br></pre></td></tr></table></figure>
+
+<p>將「資料庫管理與系統」這本書的價錢修改為700</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Product</span><br><span class="line"><span class="keyword">SET</span> unitPrice<span class="operator">=</span><span class="number">700</span></span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;資料庫管理與系統&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>如果有其他紀錄也符合條件，那它們都會修改unitPrice為700</p>
+<p><strong>刪除語法</strong></p>
+<p>刪除一個資料表裡某些紀錄的標準語法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="operator">&lt;</span>資料表名稱<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">WHERE</span> <span class="operator">&lt;</span>條件<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>將名為「資料庫管理與系統」的商品紀錄刪除</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> Prodcut</span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;資料庫管理與系統&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>MySQL的刪除語法須加上FROM</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Prodcut</span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;資料庫管理與系統&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>不管是新增、修改或刪除，都必須<span id='mark'>遵守所定義的完整限制</span>，否則就不會被接受，並會出現錯誤訊息。</p>
+
+            </div>
+
+            <!-- Post information -->
+            
+            
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <ul class="pagination d-block text-center">
+            
+            
+                <li class="next page-item d-inline"><a href="/2024/11/18/marketing-3/" class="page-link float-right">上一頁  &rarr;</a></li>
+            
+        </ul>
+    </div>
+
+
+            
+                <!-- Comments -->
+                
+
+                
+
+            
+
+        </div>
+    </div>
+</article> 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    <style>
+        #toc-content .toc-link::before {
+            background-color: transparent;
+            max-height: 25px;
+        }
+
+        #toc-content .toc-link.is-active-link::before {
+            background-color: #404040;
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <div class="ui-toc dropup scrollspy-body pull-right" style="right: 3%;">
+        <button type="button" class="toc-btn btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            <i class="fas fa-list"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right p-2"  aria-labelledby="tocLabel">
+            <div class="toc-widget">
+                <div id="toc-content" class="text-truncate">
+                </div>
+            </div>
+            <div class="toc-menu pt-3 pl-4">
+                <a class="expand-toggle d-block py-1" href="#"><span class="expand-text">全部展開</span><span class="close-text" style="display: none;">全部收起</span></a>
+                <a class="back-to-top d-block py-1" href="#">回到頂部</a>
+                <a class="go-to-bottom d-block py-1" href="#">移至底部</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    </script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax:{inlineMath:[['$', '$']]}
+        })
+    </script>
+
+    
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 text-center">
+                <ul class="list-inline">
+                    
+
+                    
+
+                    
+                        <li class="list-inline-item">
+                            <a rel="external" href="https://github.com/YuZhang-Chen/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li class="list-inline-item">
+                            <a rel="external" href="mailto:c112156205@nkust.edu.tw" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <ul class="copyright footer-menu list-inline">
+                    
+                    
+                        <li class="list-inline-item">
+                            
+                            
+                            <a href="/">
+                                
+                                    首頁
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/archives/">
+                                
+                                    歸檔
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/tags/">
+                                
+                                    標籤
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/categories/">
+                                
+                                    分類
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/about">
+                                
+                                    關於我
+                                
+                            </a>
+                        </li>
+                    
+                </ul>
+                <p class="copyright footer-author">
+                    &copy; -2024 
+                    <a rel="external" class="copyright-link" href="" target="_blank">Yu-Zhang, Chen</a><br/>
+                    Powered by <a rel="external" class="copyright-link" href="https://hexo.io/" target="_blank">Hexo</a>  
+                    <span class="copyright-split">&nbsp;|&nbsp;&nbsp;</span>
+                    Theme <a rel="external" class="copyright-link" href="https://github.com/luswdev/hexo-theme-clean.git" target="_blank">Clean</a>
+                    
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    <!-- jQuery -->
+<script src="//cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
+
+<!-- For drop down -->
+<script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+<!-- Gallery -->
+<script src="//cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/js/lightgallery-all.min.js"></script>
+<!-- Busuanzi -->
+
+
+<!-- Search script -->
+
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        searchFunc( '/search.xml' , 'searchInput', 'searchResult');
+    });
+</script>
+
+
+
+<script src="/js/main.js"></script>
+
+
+
+    <!-- Search Modal -->
+    <!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content overflow-auto">
+            <div class="modal-header">
+                <input type="text" class="form-control" placeholder="搜尋關鍵字..." id="searchInput">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="searchResult">
+                    <div class="search-empty text-center text-muted p-5">
+                        <i class="far fa-meh"></i>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
