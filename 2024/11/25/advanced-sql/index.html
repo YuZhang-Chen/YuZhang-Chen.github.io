@@ -9,19 +9,13 @@
 
 
 
-    <meta name="description" content="#mark {
-    color: #FF7575;
-}
+    <meta name="description" content="說明
+因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：資料庫管理授課老師為鄞俊波老師上課用書：資料庫的核心理論與實務 8&amp;#x2F;e，作者黃三益
 
 
-說明
-因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師
-
-
-
-統計資料的型態統計資料依其屬性可分為質的資料和量的資料
-
-質的資料(qualitative d"/>
+    #mark {
+        color: #FF7575;
+"/>
 
 
 <!--Author-->
@@ -31,24 +25,18 @@
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="統計學第二章-圖表視覺的技巧"/>
+    <meta property="og:title" content="進階的SQL語法"/>
 
 
 <!--Open Graph Description-->
 
-    <meta property="og:description" content="#mark {
-    color: #FF7575;
-}
+    <meta property="og:description" content="說明
+因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：資料庫管理授課老師為鄞俊波老師上課用書：資料庫的核心理論與實務 8&amp;#x2F;e，作者黃三益
 
 
-說明
-因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師
-
-
-
-統計資料的型態統計資料依其屬性可分為質的資料和量的資料
-
-質的資料(qualitative d"/>
+    #mark {
+        color: #FF7575;
+"/>
 
 
 <!--Open Graph Site Name-->
@@ -75,7 +63,7 @@
 
 <!-- Title -->
 
-<title>統計學第二章-圖表視覺的技巧 | YuZhang的筆記</title>
+<title>進階的SQL語法 | YuZhang的筆記</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -144,7 +132,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
                 <div class="post-heading text-white">
-                    <h1>統計學第二章-圖表視覺的技巧</h1>
+                    <h1>進階的SQL語法</h1>
                     
                 </div>
             </div>
@@ -164,7 +152,7 @@
         <i class="far fa-bookmark fa-fw"></i>
         
 
-<a href="/categories/%E7%B5%B1%E8%A8%88%E5%AD%B8/">統計學</a>
+<a href="/categories/%E8%B3%87%E6%96%99%E5%BA%AB/">資料庫</a>
 
     
     
@@ -172,160 +160,62 @@
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-calendar-check fa-fw"></i>
-        2024-11-11
+        2024-11-25
     
     <!-- word count and read count -->
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-file-word fa-fw"></i>
-        897
+        681
     
 
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-clock fa-fw"></i>
-        3 Minutes
+        2 Minutes
     
 
     
 </span>  
                 
-                <style>
-#mark {
-    color: #FF7575;
-}
+                <h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
+<p>因為本人我上課都在睡覺，而且資料庫真的太難理解了！因此以文章的方式來記錄上課講過的東西。<br>本堂課為高科大智慧商務系的大二必修：資料庫管理<br>授課老師為鄞俊波老師<br>上課用書：資料庫的核心理論與實務 8&#x2F;e，作者黃三益</p>
+</blockquote>
+<style>
+    #mark {
+        color: #FF7575;
+    }
 </style>
 
-<h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
-<p>因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。<br>本堂課為高科大智慧商務系的大二必修：統計學<br>授課老師為林欣瑾老師</p>
-</blockquote>
 <br>
 
-<h4 id="統計資料的型態"><a href="#統計資料的型態" class="headerlink" title="統計資料的型態"></a>統計資料的型態</h4><p>統計資料依其屬性可分為<strong>質的資料</strong>和<strong>量的資料</strong></p>
-<ul>
-<li>質的資料(qualitative data)：又稱屬性資料、類別資料<blockquote>
-<p>不能以具體的數值來表示</p>
-</blockquote>
-</li>
-<li>量的資料(quantitative data)：又稱屬量資料<blockquote>
-<p>可用數字來表達的</p>
-</blockquote>
-<ul>
-<li>離散資料(discrete data)：是以離散變數所獲得的資料，可能值為<span id="mark">有限</span>或<span id="mark">可數無窮多</span>，所計數的數值必需為<span id="mark">整數值資料</span>，因此離散資料又稱<span id="mark">不連續資料</sapn><blockquote>
-<p>ex. 公司的員工人數</p>
-</blockquote>
-</li>
-<li>連續資料(continuous data)：是以連續變數所獲得的資料，可能值為<span id="mark">不可數的無窮多</span><blockquote>
-<p>ex. 學生的身高、體重</p>
-</blockquote>
-</li>
-<li>橫斷面資料(cross-secion data)：發生於同一期間的資料<blockquote>
-<p>ex. 2020年的covid-19確診人數</p>
-</blockquote>
-</li>
-<li>時間數列資料(time-series data)：發生於不同時期的資料<blockquote>
-<p>ex. 台灣1989~2024年的GDP</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<br>
-
-<ul>
-<li>獨立變數(independent variable) or 自變數：特徵、特色或實驗所操縱或控制的輸入變數</li>
-<li>因變數(dependent variable) or 依變數：輸出、結果或效應</li>
-</ul>
-<br>
-
-<ul>
-<li>結論 &#x3D;&gt;  因變數<span id="mark">(果)</span>會因為獨立變數<span id="mark">(因)</span>的改變而改變。</li>
-</ul>
+<h5 id="集合運算式"><a href="#集合運算式" class="headerlink" title="集合運算式"></a>集合運算式</h5><p>交集、聯集和差集等運算子可以用<span id='mark'>INTERSECT</span>、<span id='mark'>UNION</span>和<span id='mark'>EXCEPT</span>來表達，結果為一個集合，裡頭沒有重複的紀錄</p>
+<p>找出所有瀏覽過<span id='mark'>或</span>購買過「系統分析理論與實務」的會員之會員編號和會員姓名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">SELECT</span> M.mId, name</span><br><span class="line"><span class="keyword">FROM</span> Product <span class="keyword">AS</span> P, Browse <span class="keyword">AS</span> B, <span class="keyword">Member</span> <span class="keyword">AS</span> M</span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;系統分析理論與實務&#x27;</span> <span class="keyword">AND</span> P.pNo<span class="operator">=</span>B.pNo <span class="keyword">AND</span> B.mId<span class="operator">=</span>M.mId)</span><br><span class="line"><span class="keyword">UNION</span></span><br><span class="line">(<span class="keyword">SELECT</span> M.mId, name</span><br><span class="line"><span class="keyword">FROM</span> Product <span class="keyword">AS</span> P, Record <span class="keyword">AS</span> R, Transaction <span class="keyword">AS</span> T, <span class="keyword">Member</span> <span class="keyword">AS</span> M</span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;系統分析理論與實務&#x27;</span> <span class="keyword">AND</span> P.pNo<span class="operator">=</span>R.pNo <span class="keyword">AND</span> R.tNo<span class="operator">=</span>T.tNo <span class="keyword">AND</span> T.transMid<span class="operator">=</span>M.mId)</span><br></pre></td></tr></table></figure>
+<p>如果要找出瀏覽也購買過的話就把UNION改成INTERSECT即可<br>瀏覽過但沒有購買的話可以使用EXCEPT</p>
+<p>SQL允許資料表可以有重複的紀錄，所以SQL-99可以在集合運算子後面加上ALL，保留重複的紀錄</p>
 <hr>
-<h4 id="資料測量的尺度"><a href="#資料測量的尺度" class="headerlink" title="資料測量的尺度"></a>資料測量的尺度</h4><br>
-
-<ul>
-<li>名目尺度(nominal scale)：用來分類，不具數值的意義<blockquote>
-<p>ex. 女生&#x3D;2 男生&#x3D;1</p>
-</blockquote>
-</li>
-<li>順序尺度(ordinal scale)：可依資料等級的等級做排序<blockquote>
-<p>ex. 學歷</p>
-</blockquote>
-</li>
-<li>區間尺度(interval scale)：具順序尺度的性質，<span id="mark">可以做加減運算</span>，沒有真實的原點<blockquote>
-<p>ex. 溫度相差幾度</p>
-</blockquote>
-</li>
-<li>比率尺度(ratio scale)：總結前三者的性質，具有<span id="mark">最高的測量水準</span>，有真實的原點，可做加減乘除運算<blockquote>
-<p>ex. 體重、年齡、銷售金額……</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h4 id="資料的種類"><a href="#資料的種類" class="headerlink" title="資料的種類"></a>資料的種類</h4><ul>
-<li><p>資料是否整理?</p>
-<ul>
-<li>原始資料(primary data)：依研究目的所蒐集的資料<blockquote>
-<p>ex. 人口普查資料</p>
-</blockquote>
-</li>
-<li>次級資料(secondary data)：原始資料經過編輯、分析簡化的資料<br></li>
-</ul>
-</li>
-<li><p>資料是否分組?</p>
-<ul>
-<li>分組資料(grouped data)：原始資料的<span id="mark">個別值未保留</span>，因此無法得知某個資料的準確值</li>
-<li>未分組資料(ungrouped data)：原始資料的個別值還在，又稱為<span id="mark">粗資料</span></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4 id="次數分配"><a href="#次數分配" class="headerlink" title="次數分配"></a>次數分配</h4><p>次數分配是將資料分類與展示最有用的方法</p>
-<ul>
-<li><p>組界(class boundary)</p>
-<ul>
-<li>上(下)組界 &#x3D; 上(下)組限 + 1&#x2F;2(觀察值的最小單位)</li>
-</ul>
-</li>
-<li><p>組中點(class midpoint) </p>
-<ul>
-<li>組中點 &#x3D; (上組限+下組限)&#x2F;2 or (上組界+下組界)&#x2F;2</li>
-</ul>
-</li>
-<li><p>相對次數(relative frequency)</p>
-<ul>
-<li>相對次數 &#x3D; 組次數&#x2F;總次數</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分組次數表紀錄在紙上了，哈哈哈</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="次數分配的圖示"><a href="#次數分配的圖示" class="headerlink" title="次數分配的圖示"></a>次數分配的圖示</h4><p>直方圖 vs 長條圖</p>
+<h5 id="巢狀查詢句-Nested-query"><a href="#巢狀查詢句-Nested-query" class="headerlink" title="巢狀查詢句 (Nested query)"></a>巢狀查詢句 (Nested query)</h5><p>SQL的查詢句裡面，可以在FROM子句或WHERE子句裡容納另一個查詢子句，稱為巢狀查詢句</p>
+<p><strong>IN運算子</strong></p>
+<p>找出所有購買過「系統分析理論與實務」的會員之會員編號和姓名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mId, name</span><br><span class="line"><span class="keyword">FROM</span> Product,Record,Transaction,<span class="keyword">Member</span></span><br><span class="line"><span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;系統分析理論與實務&#x27;</span> <span class="keyword">AND</span> Product.pNo<span class="operator">=</span>Record.pNo <span class="keyword">AND</span> Record.tNo<span class="operator">=</span>Transaction.tNo <span class="keyword">AND</span> transMid<span class="operator">=</span>mId;</span><br></pre></td></tr></table></figure>
+<p>這樣的查詢句也可以表達為</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> mId, name</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">Member</span></span><br><span class="line"><span class="keyword">WHERE</span> mId <span class="keyword">IN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> transMid</span><br><span class="line">    <span class="keyword">FROM</span> Product <span class="keyword">AS</span> P, Record <span class="keyword">AS</span> R, Transaction <span class="keyword">AS</span> T</span><br><span class="line">    <span class="keyword">WHERE</span> pName<span class="operator">=</span><span class="string">&#x27;系統分析理論與實務&#x27;</span> <span class="keyword">AND</span> P.pNo<span class="operator">=</span>R.pNo <span class="keyword">AND</span> R.tNo<span class="operator">=</span>T.tNo</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>IN左邊為一筆紀錄，右邊則為一個資料夾，如果該紀錄出現在該資料表裡，則WHERE條件為真</p>
+<p>IN前面可以加上NOT表示否定</p>
+<p>除了IN之外，還有其他相關的比較運算子</p>
 <ol>
-<li>直方圖的長條寬度代表<span id="mark">組距的大小</span>，長條圖的寬度沒有意義</li>
-<li>直方圖的長條緊緊相連，長條圖的每個長條都是分開的，且長條圖種類眾多</li>
+<li>&#x3D;(&gt;, &gt;&#x3D;, &lt;, &lt;&#x3D;) SOME (SELECT…)：表示右邊子查詢句結果裡的紀錄至少要有一筆滿足條件</li>
+<li>&#x3D;(&gt;, &gt;&#x3D;, &lt;, &lt;&#x3D;) ALL (SELECT…)：表示右邊子查詢句結果裡的紀錄都要滿足條件</li>
 </ol>
-<p><div class="img-item" data-src="https://drfishstats.com/wp-content/uploads/2023/01/bar_graph_featured_image.jpg" data-sub-html=".caption"><img src="https://drfishstats.com/wp-content/uploads/2023/01/bar_graph_featured_image.jpg" alt="直方圖vs長條圖"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">直方圖vs長條圖</span></div></div></p>
-<hr>
-<h4 id="次數分配的型態"><a href="#次數分配的型態" class="headerlink" title="次數分配的型態"></a>次數分配的型態</h4><ol>
-<li><p>單峰對稱分配：又稱常態分配(Normal distribution)</p>
-</li>
-<li><p>單峰不對稱分配：</p>
-<ul>
-<li>左偏分配：又稱正偏分配(positively skewed distribution)</li>
-<li>右偏分配：又稱負偏分配(negatively skewed distribution)</li>
-</ul>
-</li>
-<li><p>J型分配：次數最高的組，在最左端或右端</p>
-</li>
-<li><p>雙峰分配(bimodal distribution)：有兩個不同的高峰，又稱M型分配</p>
-<blockquote>
-<p>ex. 國民所得分配</p>
-</blockquote>
-</li>
-</ol>
-<p><div class="img-item" data-src="https://i0.wp.com/statisticsbyjim.com/wp-content/uploads/2022/03/Bimodal_distribution.png?fit=562,342&ssl=1" data-sub-html=".caption"><img src="https://i0.wp.com/statisticsbyjim.com/wp-content/uploads/2022/03/Bimodal_distribution.png?fit=562,342&ssl=1" alt="雙峰分配"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">雙峰分配</span></div></div></p>
+<br>
+
+<p>找出所有定價比所有書籍都高的商品</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> pNo, pName</span><br><span class="line"><span class="keyword">FROM</span> Product</span><br><span class="line"><span class="keyword">WHERE</span> unitPrice <span class="operator">&gt;</span> <span class="keyword">ALL</span>(</span><br><span class="line">    <span class="keyword">SELECT</span> unitPrice <span class="keyword">FROM</span> Product <span class="keyword">WHERE</span> category<span class="operator">=</span><span class="string">&#x27;Book&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>IN右邊的子查詢句也可以直接列出</p>
+<p><strong>EXISTS運算子</strong></p>
+<p>一個單元運算子，用來測試子查詢句裡面是否有紀錄</p>
 
             </div>
 
@@ -335,10 +225,10 @@
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
         <ul class="pagination d-block text-center">
             
-                <li class="previous page-item d-inline"><a href="/2024/11/12/statistics_3/" class="page-link float-left">&larr;  下一頁</a></li>
+                <li class="previous page-item d-inline"><a href="/2024/12/03/sql-middleDB/" class="page-link float-left">&larr;  下一頁</a></li>
             
             
-                <li class="next page-item d-inline"><a href="/2024/11/11/statistics_1/" class="page-link float-right">上一頁  &rarr;</a></li>
+                <li class="next page-item d-inline"><a href="/2024/11/20/basic-sql/" class="page-link float-right">上一頁  &rarr;</a></li>
             
         </ul>
     </div>
