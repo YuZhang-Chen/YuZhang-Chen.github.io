@@ -14,12 +14,9 @@
 }
 
 
+
 說明
-因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師11&amp;#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D
-
-
-
-數值敘述技巧來敘述資"/>
+因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師11&amp;#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D12&amp;#x2F;9紀錄，我"/>
 
 
 <!--Author-->
@@ -39,12 +36,9 @@
 }
 
 
+
 說明
-因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師11&amp;#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D
-
-
-
-數值敘述技巧來敘述資"/>
+因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。本堂課為高科大智慧商務系的大二必修：統計學授課老師為林欣瑾老師11&amp;#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D12&amp;#x2F;9紀錄，我"/>
 
 
 <!--Open Graph Site Name-->
@@ -174,13 +168,13 @@
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-file-word fa-fw"></i>
-        1.8k
+        2.5k
     
 
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-clock fa-fw"></i>
-        6 Minutes
+        9 Minutes
     
 
     
@@ -190,10 +184,11 @@
 #mark {
     color: #FF7575;
 }
+
 </style>
 
 <h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
-<p>因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。<br>本堂課為高科大智慧商務系的大二必修：統計學<br>授課老師為林欣瑾老師<br>11&#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D</p>
+<p>因為本人我上課都沒在抄筆記，因此以文章的方式來記錄上課講過的東西。<br>本堂課為高科大智慧商務系的大二必修：統計學<br>授課老師為林欣瑾老師<br>11&#x2F;13紀錄，到底誰會明天要考統計今天才在做筆記啊? 是我:D<br>12&#x2F;9紀錄，我其實沒想到第三章這麼多內容</p>
 </blockquote>
 <br>
 
@@ -349,6 +344,65 @@
 <li>正的Z值表示變數值比期望值大 Z 個標準差</li>
 <li>負的Z值表示變數值比期望值小 |Z| 個標準差</li>
 </ul>
+<hr>
+<h4 id="形狀之測量數或測量值"><a href="#形狀之測量數或測量值" class="headerlink" title="形狀之測量數或測量值"></a>形狀之測量數或測量值</h4><br>
+
+<h5 id="偏態係數"><a href="#偏態係數" class="headerlink" title="偏態係數"></a>偏態係數</h5><ul>
+<li><p>Bowley 偏態係數 $SK_B$</p>
+<p>  $$SK_B &#x3D; {(Q_3-Q_2)-(Q_2-Q_1) \over Q_3-Q_1} $$</p>
+<p>  $SK_B$ 介於1到-1之間，$\vert SK_B\vert$ 越大，資料分配的偏斜程度也越大</p>
+</li>
+<li><p>Karl Peason 偏態係數 $SK_p$<br>  $$SK_p &#x3D; {3(\bar{x}- me )\over s}$$</p>
+<p>  Peason偏態係數 $SK_p$ 的範圍約在正負3之間，$\vert SK_p\vert$ 越大，資料分配的偏斜程度也越大</p>
+</li>
+</ul>
+<h5 id="峰度係數"><a href="#峰度係數" class="headerlink" title="峰度係數"></a>峰度係數</h5><p>樣本：<br>$$ck &#x3D; {\sum(x_i-\bar{x}^4)&#x2F;n\over s^4} $$</p>
+<hr>
+<p>若想知道觀察值落在某一區間的機率或比例有多大，可以使用Chebyshev 不等式或經驗法則</p>
+<h5 id="Chebyshev-不等式"><a href="#Chebyshev-不等式" class="headerlink" title="Chebyshev 不等式"></a>Chebyshev 不等式</h5><p>若隨機變數X有平均數$\mu$與標準差$\sigma$，則$P(\vert X-\mu\vert\leq k\sigma) \geq 1-$ $1\over k^2$，其中k為<span id='mark'>大於1的任意數</span>，可以用樣本來估計母體</p>
+<ol>
+<li>至少有$3\over4$ (75%)的觀察值落在($\mu-2\sigma$, $\mu+2\sigma$)或($\bar{x}-2s$, $\bar{x}+2s$)的區間內</li>
+<li>至少有$8\over9$ (89%)的觀察值落在($\mu-3\sigma$, $\mu+3\sigma$)或($\bar{x}-3s$, $\bar{x}+3s$)的區間內</li>
+</ol>
+<br>
+
+<h5 id="經驗法則"><a href="#經驗法則" class="headerlink" title="經驗法則"></a>經驗法則</h5><p>當資料為常態分配或近似常態分配時，則有下列的特性</p>
+<ol>
+<li>大約有68%的觀察值落於($\mu-\sigma$, $\mu+\sigma$)或($\bar{x}-s$, $\bar{x}+s$)的區間內</li>
+<li>大約有95%的觀察值落於($\mu-2\sigma$, $\mu+2\sigma$)或($\bar{x}-2s$, $\bar{x}+2s$)的區間內</li>
+<li>大約有99.7%的觀察值落於($\mu-3\sigma$, $\mu+3\sigma$)或($\bar{x}-3s$, $\bar{x}+3s$)的區間內</li>
+</ol>
+<hr>
+<h4 id="探索性資料分析"><a href="#探索性資料分析" class="headerlink" title="探索性資料分析"></a>探索性資料分析</h4><br>
+
+<h5 id="盒鬚圖"><a href="#盒鬚圖" class="headerlink" title="盒鬚圖"></a>盒鬚圖</h5><p>將中位數與四分位距用圖形表現出來的一種圖示法</p>
+<p>步驟：</p>
+<ol>
+<li>排序</li>
+<li>計算Q1、Me、Q3、IQR</li>
+<li>畫水平線，將觀察值的尺度標示於數線上</li>
+<li>在Q1、Q3畫垂直邊界</li>
+<li>在中位數畫一條垂直線</li>
+<li>計算內籬笆與外籬笆<ul>
+<li>下內籬笆 &#x3D; Q1-(1.5*IQR)</li>
+<li>上內籬笆 &#x3D; Q3-(1.5*IQR)</li>
+<li>下外籬笆 &#x3D; Q1-(3*IQR)</li>
+<li>上外籬笆 &#x3D; Q3-(3*IQR)</li>
+</ul>
+</li>
+<li>畫鬍鬚，內籬笆的最大、小值，稱為左右鬍鬚</li>
+<li>將可疑的異常值以(*)表示，極端的異常值以(O)表示</li>
+</ol>
+<p><div class="img-item" data-src="/../images/st_3/box_plot.png" data-sub-html=".caption"><img src="/../images/st_3/box_plot.png" alt="盒鬚圖"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">盒鬚圖</span></div></div></p>
+<hr>
+<h4 id="兩變數線性相關之測量數"><a href="#兩變數線性相關之測量數" class="headerlink" title="兩變數線性相關之測量數"></a>兩變數線性相關之測量數</h4><p>探討兩變數X、Y的關係，必須繪製散布圖</p>
+<h5 id="共變異數"><a href="#共變異數" class="headerlink" title="共變異數"></a>共變異數</h5><p>母體共變異數<br>$$COV(X, Y) &#x3D; {\sum_{i&#x3D;1}^N(x_i-\mu_x)(y_i-\mu_Y)\over N} $$</p>
+<p>樣本共變異數<br>$$COV(X, Y) &#x3D; {\sum_{i&#x3D;1}^n(x_i-\bar{x})(y_i-\bar{y})\over n-1} $$</p>
+<p>COV(X, Y) &#x3D; 0 表示兩變數之間無線性相關或曲線相關</p>
+<br>
+
+<h5 id="相關係數"><a href="#相關係數" class="headerlink" title="相關係數"></a>相關係數</h5><p>樣本相關係數<br>$$r &#x3D; {cov(X,Y)\over s_X s_Y}$$</p>
+<p>$s_X$, $s_Y$代表變數X、Y的樣本標準差，r的值 $-1 \leq r \leq 1$</p>
 
             </div>
 
@@ -421,6 +475,13 @@
         });
     </script>
 
+
+    <script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax:{inlineMath:[['$', '$']]}
+        })
+    </script>
 
     
 
