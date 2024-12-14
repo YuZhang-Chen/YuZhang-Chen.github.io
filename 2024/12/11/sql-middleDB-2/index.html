@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!--Description-->
+
+
+
+    <meta name="description" content="說明
+這篇為作業題目，會考實作練習。本堂課為高科大智慧商務系的大二必修：資料庫管理授課老師為鄞俊波老師上課用書：資料庫的核心理論與實務 8&amp;#x2F;e，作者黃三益
+
+
+
+高智商 SQL 會考題庫練習
+
+
+三、子查詢
+
+34. 列出月薪高於業務部門最高月薪的員工12345678910SELECT D"/>
+
+
+<!--Author-->
+
+    <meta name="author" content="Yu-Zhang, Chen"/>
+
+
+<!--Open Graph Title-->
+
+    <meta property="og:title" content="資料庫 題庫練習(二)"/>
+
+
+<!--Open Graph Description-->
+
+    <meta property="og:description" content="說明
+這篇為作業題目，會考實作練習。本堂課為高科大智慧商務系的大二必修：資料庫管理授課老師為鄞俊波老師上課用書：資料庫的核心理論與實務 8&amp;#x2F;e，作者黃三益
+
+
+
+高智商 SQL 會考題庫練習
+
+
+三、子查詢
+
+34. 列出月薪高於業務部門最高月薪的員工12345678910SELECT D"/>
+
+
+<!--Open Graph Site Name-->
+    <meta property="og:site_name" content="YuZhang的筆記"/>
+
+<!--Type page-->
+
+    <meta property="og:type" content="article"/>
+
+
+<!--Page Cover-->
+
+
+    <meta property="og:image" content="https://github.com/img/home-bg.jpg"/>
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+
+
+
+    <meta name="twitter:image" content="https://github.com/img/home-bg.jpg"/>
+
+
+<!-- Title -->
+
+<title>資料庫 題庫練習(二) | YuZhang的筆記</title>
+
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<!-- Custom Fonts -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" />
+<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" />
+<link href="//fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Gallery -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/featherlight@1.4.0/src/featherlight.css" integrity="sha256-30DV/STftlyQ6v8yaOWlabammvCYtRJERLj/m0b3zno=" crossorigin="anonymous">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/css/lightgallery.min.css">
+
+<!-- favicon -->
+
+<link rel="icon" href="/img/favicon.png"/>
+
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- Head tag -->
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top bg-transparent position-absolute w-100 p-0" id="nav">
+    <div class="container pl-0 pr-0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand text-white p-1 pl-3" href="/">YuZhang的筆記</a>
+        </div>
+        <div class="navbar-nav float-right">
+            <button class="btn btn-link search-btn navbar-item" data-toggle="modal" data-target="#searchModal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="post-heading text-white">
+                    <h1>資料庫 題庫練習(二)</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Main Content -->
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                
+                    <span class="meta d-inline-block">
+    
+        <i class="far fa-bookmark fa-fw"></i>
+        
+
+<a href="/categories/%E8%B3%87%E6%96%99%E5%BA%AB/">資料庫</a>
+
+    
+    
+    <!-- Date -->
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-calendar-check fa-fw"></i>
+        2024-12-11
+    
+    <!-- word count and read count -->
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-file-word fa-fw"></i>
+        759
+    
+
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-clock fa-fw"></i>
+        3 Minutes
+    
+
+    
+</span>  
+                
+                <h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
+<p>這篇為作業題目，會考實作練習。<br>本堂課為高科大智慧商務系的大二必修：資料庫管理<br>授課老師為鄞俊波老師<br>上課用書：資料庫的核心理論與實務 8&#x2F;e，作者黃三益</p>
+</blockquote>
+<br>
+
+<h2 id="高智商-SQL-會考題庫練習"><a href="#高智商-SQL-會考題庫練習" class="headerlink" title="高智商 SQL 會考題庫練習"></a>高智商 SQL 會考題庫練習</h2><br>
+
+
+<h3 id="三、子查詢"><a href="#三、子查詢" class="headerlink" title="三、子查詢"></a>三、子查詢</h3><br>
+
+<h5 id="34-列出月薪高於業務部門最高月薪的員工"><a href="#34-列出月薪高於業務部門最高月薪的員工" class="headerlink" title="34. 列出月薪高於業務部門最高月薪的員工"></a>34. 列出月薪高於業務部門最高月薪的員工</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DeptName <span class="keyword">AS</span> 部門名稱, EmpName <span class="keyword">AS</span> 姓名, MonthSalary <span class="keyword">AS</span> 目前月薪資</span><br><span class="line"><span class="keyword">FROM</span> dept</span><br><span class="line"><span class="keyword">JOIN</span> employee <span class="keyword">ON</span> employee.DeptId<span class="operator">=</span>dept.DeptId</span><br><span class="line"><span class="keyword">WHERE</span> MonthSalary <span class="operator">&gt;</span> (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(MonthSalary)</span><br><span class="line"><span class="keyword">FROM</span> dept</span><br><span class="line"><span class="keyword">JOIN</span> employee <span class="keyword">ON</span> employee.DeptId<span class="operator">=</span>dept.DeptId</span><br><span class="line"><span class="keyword">WHERE</span> DeptName <span class="keyword">LIKE</span> <span class="string">&#x27;業務%&#x27;</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> MonthSalary <span class="keyword">DESC</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> DeptName, MonthSalary <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/3_34.png" data-sub-html=".caption"><img src="/../images/middleDB/3_34.png" alt="3-34 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">3-34 Result</span></div></div></p>
+<hr>
+<h5 id="37-列出2018年度台北市的銷售員沒賣過的產品名稱"><a href="#37-列出2018年度台北市的銷售員沒賣過的產品名稱" class="headerlink" title="37. 列出2018年度台北市的銷售員沒賣過的產品名稱"></a>37. 列出2018年度台北市的銷售員沒賣過的產品名稱</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ProdName <span class="keyword">AS</span> 產品名稱</span><br><span class="line"><span class="keyword">FROM</span> product</span><br><span class="line"><span class="keyword">WHERE</span> ProdName <span class="keyword">NOT</span> <span class="keyword">IN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> ProdName</span><br><span class="line">    <span class="keyword">FROM</span> product</span><br><span class="line">    <span class="keyword">JOIN</span> orderdetail <span class="keyword">ON</span> orderdetail.ProdId<span class="operator">=</span>product.ProdID</span><br><span class="line">    <span class="keyword">JOIN</span> salesorder <span class="keyword">ON</span> salesorder.OrderId<span class="operator">=</span>orderdetail.OrderId</span><br><span class="line">    <span class="keyword">JOIN</span> employee <span class="keyword">ON</span> employee.EmpId<span class="operator">=</span>salesorder.EmpId</span><br><span class="line">    <span class="keyword">WHERE</span> City<span class="operator">=</span><span class="string">&#x27;台北市&#x27;</span> <span class="keyword">AND</span> <span class="keyword">Year</span>(OrderDate)<span class="operator">=</span><span class="number">2018</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ProdName;</span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/3_37.png" data-sub-html=".caption"><img src="/../images/middleDB/3_37.png" alt="3-37 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">3-37 Result</span></div></div></p>
+<hr>
+<h3 id="四、子查詢-群組綜合應用"><a href="#四、子查詢-群組綜合應用" class="headerlink" title="四、子查詢+群組綜合應用"></a>四、子查詢+群組綜合應用</h3><br>
+
+<h5 id="40-列出-2018-年中所有顧客與公司的交易統計"><a href="#40-列出-2018-年中所有顧客與公司的交易統計" class="headerlink" title="40. 列出 2018 年中所有顧客與公司的交易統計"></a>40. 列出 2018 年中所有顧客與公司的交易統計</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CustName <span class="keyword">AS</span> 客戶寶號, <span class="built_in">SUM</span>(Qty<span class="operator">*</span>UnitPrice<span class="operator">*</span>DisCount) <span class="keyword">AS</span> 業績總額, <span class="built_in">SUM</span>(Qty<span class="operator">*</span>(UnitPrice<span class="operator">*</span>DisCount<span class="operator">-</span>Cost)) <span class="keyword">AS</span> 利潤總額, <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> salesorder.OrderId) <span class="keyword">AS</span> 交易次數</span><br><span class="line"><span class="keyword">FROM</span> customer</span><br><span class="line"><span class="keyword">JOIN</span> salesorder <span class="keyword">ON</span> salesorder.CustId<span class="operator">=</span>customer.CustId</span><br><span class="line"><span class="keyword">JOIN</span> orderdetail <span class="keyword">ON</span> orderdetail.OrderId<span class="operator">=</span>salesorder.OrderId</span><br><span class="line"><span class="keyword">JOIN</span> product <span class="keyword">ON</span> product.ProdID<span class="operator">=</span>orderdetail.ProdId</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">Year</span>(OrderDate)<span class="operator">=</span><span class="number">2018</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> customer.CustId</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="built_in">SUM</span>(Qty<span class="operator">*</span>(UnitPrice<span class="operator">*</span>DisCount<span class="operator">-</span>Cost)) <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/4_40.png" data-sub-html=".caption"><img src="/../images/middleDB/4_40.png" alt="4-40 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">4-40 Result</span></div></div></p>
+<hr>
+<h5 id="43-列出-2018-年中-每個個別業務銷售次數大於3-次者-至少成交過三筆訂單"><a href="#43-列出-2018-年中-每個個別業務銷售次數大於3-次者-至少成交過三筆訂單" class="headerlink" title="43. 列出 2018 年中,每個個別業務銷售次數大於3 次者(至少成交過三筆訂單)"></a>43. 列出 2018 年中,每個個別業務銷售次數大於3 次者(至少成交過三筆訂單)</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DeptName <span class="keyword">AS</span> 部門名稱, EmpName <span class="keyword">AS</span> 業務姓名, JobTitle <span class="keyword">AS</span> 現任職稱, <span class="built_in">SUM</span>(Qty<span class="operator">*</span>UnitPrice<span class="operator">*</span>Discount) <span class="keyword">AS</span> 業績總額, <span class="built_in">SUM</span>(Qty<span class="operator">*</span>(UnitPrice<span class="operator">*</span>Discount<span class="operator">-</span>Cost)) <span class="keyword">AS</span> 利潤總額</span><br><span class="line"><span class="keyword">FROM</span> dept</span><br><span class="line"><span class="keyword">JOIN</span> employee <span class="keyword">ON</span> employee.DeptId<span class="operator">=</span>dept.DeptId</span><br><span class="line"><span class="keyword">JOIN</span> salesorder <span class="keyword">ON</span> salesorder.EmpId<span class="operator">=</span>employee.EmpId</span><br><span class="line"><span class="keyword">JOIN</span> orderdetail <span class="keyword">ON</span> orderdetail.OrderId<span class="operator">=</span>salesorder.OrderId</span><br><span class="line"><span class="keyword">JOIN</span> product <span class="keyword">ON</span> product.ProdID<span class="operator">=</span>orderdetail.ProdId</span><br><span class="line"><span class="keyword">WHERE</span> salesorder.EmpId <span class="keyword">IN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> EmpId</span><br><span class="line">    <span class="keyword">FROM</span> salesorder</span><br><span class="line">    <span class="keyword">WHERE</span> <span class="keyword">year</span>(OrderDate)<span class="operator">=</span><span class="number">2018</span></span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> EmpId</span><br><span class="line">    <span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>)<span class="operator">&gt;=</span><span class="number">3</span></span><br><span class="line">) <span class="keyword">AND</span> DeptName <span class="keyword">LIKE</span> <span class="string">&#x27;%業務%&#x27;</span> <span class="keyword">AND</span> <span class="keyword">Year</span>(OrderDate)<span class="operator">=</span><span class="number">2018</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> EmpName, JobTitle, DeptName</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="built_in">SUM</span>(Qty<span class="operator">*</span>(UnitPrice<span class="operator">*</span>Discount<span class="operator">-</span>Cost)) <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/4_43.png" data-sub-html=".caption"><img src="/../images/middleDB/4_43.png" alt="4-43 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">4-43 Result</span></div></div></p>
+<hr>
+<h5 id="46-列出2018年-各縣市銷售業績最佳的業務員"><a href="#46-列出2018年-各縣市銷售業績最佳的業務員" class="headerlink" title="46. 列出2018年,各縣市銷售業績最佳的業務員"></a>46. 列出2018年,各縣市銷售業績最佳的業務員</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> city <span class="keyword">AS</span> 縣市, e <span class="keyword">AS</span> 員工姓名, s <span class="keyword">AS</span> 銷售業績</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> city, employee.EmpName <span class="keyword">AS</span> e, <span class="built_in">SUM</span>(Qty <span class="operator">*</span> UnitPrice <span class="operator">*</span> Discount) <span class="keyword">AS</span> s</span><br><span class="line">    <span class="keyword">FROM</span> employee</span><br><span class="line">    <span class="keyword">JOIN</span> salesorder <span class="keyword">ON</span> salesorder.EmpId <span class="operator">=</span> employee.EmpId</span><br><span class="line">    <span class="keyword">JOIN</span> orderdetail <span class="keyword">ON</span> orderdetail.OrderId <span class="operator">=</span> salesorder.OrderId</span><br><span class="line">    <span class="keyword">JOIN</span> product <span class="keyword">ON</span> product.ProdID <span class="operator">=</span> orderdetail.ProdId</span><br><span class="line">    <span class="keyword">WHERE</span> <span class="keyword">Year</span>(OrderDate) <span class="operator">=</span> <span class="number">2018</span></span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> city, employee.EmpId</span><br><span class="line">) <span class="keyword">AS</span> Temp</span><br><span class="line"><span class="keyword">WHERE</span> (city, s) <span class="keyword">IN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> city, <span class="built_in">MAX</span>(s) <span class="keyword">AS</span> max_s</span><br><span class="line">    <span class="keyword">FROM</span> (</span><br><span class="line">        <span class="keyword">SELECT</span> city, <span class="built_in">SUM</span>(Qty <span class="operator">*</span> UnitPrice <span class="operator">*</span> Discount) <span class="keyword">AS</span> s          </span><br><span class="line">        <span class="keyword">FROM</span> employee</span><br><span class="line">        <span class="keyword">JOIN</span> salesorder <span class="keyword">ON</span> salesorder.EmpId <span class="operator">=</span> employee.EmpId</span><br><span class="line">        <span class="keyword">JOIN</span> orderdetail <span class="keyword">ON</span> orderdetail.OrderId <span class="operator">=</span> salesorder.OrderId</span><br><span class="line">        <span class="keyword">JOIN</span>  product <span class="keyword">ON</span> product.ProdID <span class="operator">=</span> orderdetail.ProdId</span><br><span class="line">        <span class="keyword">WHERE</span> <span class="keyword">Year</span>(OrderDate) <span class="operator">=</span> <span class="number">2018</span></span><br><span class="line">        <span class="keyword">GROUP</span> <span class="keyword">BY</span> city, employee.EmpId</span><br><span class="line">    ) <span class="keyword">AS</span> Temp2</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> city</span><br><span class="line">)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> s;</span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/4_46.png" data-sub-html=".caption"><img src="/../images/middleDB/4_46.png" alt="4-46 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">4-46 Result</span></div></div></p>
+<hr>
+<h5 id="49-統計2018年業務部門主管業績獎金"><a href="#49-統計2018年業務部門主管業績獎金" class="headerlink" title="49. 統計2018年業務部門主管業績獎金"></a>49. 統計2018年業務部門主管業績獎金</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DeptName <span class="keyword">AS</span> 部門名稱, EMPB.EmpName <span class="keyword">AS</span> 主管姓名, <span class="built_in">SUM</span>(Qty<span class="operator">*</span>UnitPrice<span class="operator">*</span>Discount)<span class="operator">/</span>QuotaA <span class="keyword">AS</span> 業績達成率, <span class="built_in">SUM</span>((UnitPrice<span class="operator">*</span>Discount<span class="operator">-</span>Cost)<span class="operator">*</span>Qty) <span class="keyword">AS</span> 毛利, EMPB.MonthSalary<span class="operator">*</span><span class="number">16.5</span> <span class="keyword">AS</span> 年薪, </span><br><span class="line"><span class="built_in">SUM</span>(Qty<span class="operator">*</span>(UnitPrice<span class="operator">*</span>Discount<span class="operator">-</span>Cost))<span class="operator">*</span><span class="number">0.02</span><span class="operator">*</span>(<span class="built_in">SUM</span>(Qty<span class="operator">*</span>UnitPrice<span class="operator">*</span>Discount)<span class="operator">/</span>QuotaA) <span class="keyword">AS</span> 獎金</span><br><span class="line"><span class="keyword">FROM</span> dept, employee EMPA, employee EMPB, salesorder, orderdetail, product, (</span><br><span class="line">    <span class="keyword">SELECT</span> dept.DeptId, <span class="built_in">SUM</span>(quota2018) <span class="keyword">AS</span> QuotaA</span><br><span class="line">    <span class="keyword">FROM</span> dept, employee, quota</span><br><span class="line">    <span class="keyword">WHERE</span> dept.DeptId<span class="operator">=</span>employee.DeptId <span class="keyword">AND</span></span><br><span class="line">    	employee.EmpId<span class="operator">=</span>quota.EmpId</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> dept.DeptId) <span class="keyword">AS</span> Q</span><br><span class="line"><span class="keyword">WHERE</span> dept.DeptId<span class="operator">=</span>EMPA.DeptId <span class="keyword">AND</span></span><br><span class="line">	EMPA.EmpId<span class="operator">=</span>salesorder.EmpId <span class="keyword">AND</span></span><br><span class="line">    salesorder.OrderId<span class="operator">=</span>orderdetail.OrderId <span class="keyword">AND</span></span><br><span class="line">    orderdetail.ProdId<span class="operator">=</span>product.ProdID <span class="keyword">AND</span></span><br><span class="line">    dept.DeptId<span class="operator">=</span>Q.DeptId <span class="keyword">AND</span></span><br><span class="line">    EMPB.EmpId<span class="operator">=</span>Dept.ManagerEmpId <span class="keyword">AND</span></span><br><span class="line">    <span class="keyword">year</span>(OrderDate)<span class="operator">=</span><span class="number">2018</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> DeptName, EMPB.EmpName, QuotaA</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> DeptName;</span><br></pre></td></tr></table></figure>
+
+<p><div class="img-item" data-src="/../images/middleDB/4_49.png" data-sub-html=".caption"><img src="/../images/middleDB/4_49.png" alt="4-49 Result"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">4-49 Result</span></div></div></p>
+
+            </div>
+
+            <!-- Post information -->
+            
+            
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <ul class="pagination d-block text-center">
+            
+            
+                <li class="next page-item d-inline"><a href="/2024/12/03/sql-middleDB_1/" class="page-link float-right">上一頁  &rarr;</a></li>
+            
+        </ul>
+    </div>
+
+
+            
+                <!-- Comments -->
+                
+
+                
+
+            
+
+        </div>
+    </div>
+</article> 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    <style>
+        #toc-content .toc-link::before {
+            background-color: transparent;
+            max-height: 25px;
+        }
+
+        #toc-content .toc-link.is-active-link::before {
+            background-color: #404040;
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <div class="ui-toc dropup scrollspy-body pull-right" style="right: 3%;">
+        <button type="button" class="toc-btn btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            <i class="fas fa-list"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right p-2"  aria-labelledby="tocLabel">
+            <div class="toc-widget">
+                <div id="toc-content" class="text-truncate">
+                </div>
+            </div>
+            <div class="toc-menu pt-3 pl-4">
+                <a class="expand-toggle d-block py-1" href="#"><span class="expand-text">全部展開</span><span class="close-text" style="display: none;">全部收起</span></a>
+                <a class="back-to-top d-block py-1" href="#">回到頂部</a>
+                <a class="go-to-bottom d-block py-1" href="#">移至底部</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    </script>
+
+
+    
+
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 text-center">
+                <ul class="list-inline">
+                    
+
+                    
+
+                    
+                        <li class="list-inline-item">
+                            <a rel="external" href="https://github.com/YuZhang-Chen/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li class="list-inline-item">
+                            <a rel="external" href="mailto:c112156205@nkust.edu.tw" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <ul class="copyright footer-menu list-inline">
+                    
+                    
+                        <li class="list-inline-item">
+                            
+                            
+                            <a href="/">
+                                
+                                    首頁
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/archives/">
+                                
+                                    歸檔
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/tags/">
+                                
+                                    標籤
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/categories/">
+                                
+                                    分類
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="list-inline-item">
+                            
+                                <span class="copyright-split">&nbsp;|&nbsp;</span>
+                            
+                            
+                            <a href="/about">
+                                
+                                    關於我
+                                
+                            </a>
+                        </li>
+                    
+                </ul>
+                <p class="copyright footer-author">
+                    &copy; -2024 
+                    <a rel="external" class="copyright-link" href="" target="_blank">Yu-Zhang, Chen</a><br/>
+                    Powered by <a rel="external" class="copyright-link" href="https://hexo.io/" target="_blank">Hexo</a>  
+                    <span class="copyright-split">&nbsp;|&nbsp;&nbsp;</span>
+                    Theme <a rel="external" class="copyright-link" href="https://github.com/luswdev/hexo-theme-clean.git" target="_blank">Clean</a>
+                    
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    <!-- jQuery -->
+<script src="//cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
+
+<!-- For drop down -->
+<script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+<!-- Gallery -->
+<script src="//cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/js/lightgallery-all.min.js"></script>
+<!-- Busuanzi -->
+
+
+<!-- Search script -->
+
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        searchFunc( '/search.xml' , 'searchInput', 'searchResult');
+    });
+</script>
+
+
+
+<script src="/js/main.js"></script>
+
+
+
+    <!-- Search Modal -->
+    <!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content overflow-auto">
+            <div class="modal-header">
+                <input type="text" class="form-control" placeholder="搜尋關鍵字..." id="searchInput">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="searchResult">
+                    <div class="search-empty text-center text-muted p-5">
+                        <i class="far fa-meh"></i>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
