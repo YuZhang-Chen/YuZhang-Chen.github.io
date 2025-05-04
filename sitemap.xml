@@ -184,13 +184,6 @@
 
   
   <url>
-    <loc>https://github.com/categories/%E8%B3%87%E6%96%99%E5%BA%AB/</loc>
-    <lastmod>2025-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/categories/SAP-ABAP/</loc>
     <lastmod>2025-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -198,14 +191,21 @@
   </url>
   
   <url>
-    <loc>https://github.com/categories/Git/</loc>
+    <loc>https://github.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7/</loc>
     <lastmod>2025-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://github.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7/</loc>
+    <loc>https://github.com/categories/%E8%B3%87%E6%96%99%E5%BA%AB/</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/categories/Git/</loc>
     <lastmod>2025-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
