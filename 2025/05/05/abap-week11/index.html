@@ -9,11 +9,16 @@
 
 
 
-    <meta name="description" content="🧠 感測器實作期中考重點總整理說明這是chatGPT生成的，我今天第一次買Plus
+    <meta name="description" content="說明
+本堂課為高科大智慧商務系的大二選修：ABAP程式設計感謝github copilot的gpt 4o生成markdown格式，但截圖還是得我自己補上
 
-📌 Raspberry Pi 環境設定
-樹莓派為基於 Linux 的單板電腦，本課程使用 Raspberry Pi 3 Model B
-開機需要 SD 卡（可使用 Raspberry Pi Imager 建立）"/>
+
+
+補充SY-DATUM 顯示當天日期
+
+SE38的程式架構本週講的是 selection-screen 的區塊。
+
+ABAP MOVE 小筆記"/>
 
 
 <!--Author-->
@@ -23,16 +28,21 @@
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="感測器期中考"/>
+    <meta property="og:title" content="ABAP selection-screen"/>
 
 
 <!--Open Graph Description-->
 
-    <meta property="og:description" content="🧠 感測器實作期中考重點總整理說明這是chatGPT生成的，我今天第一次買Plus
+    <meta property="og:description" content="說明
+本堂課為高科大智慧商務系的大二選修：ABAP程式設計感謝github copilot的gpt 4o生成markdown格式，但截圖還是得我自己補上
 
-📌 Raspberry Pi 環境設定
-樹莓派為基於 Linux 的單板電腦，本課程使用 Raspberry Pi 3 Model B
-開機需要 SD 卡（可使用 Raspberry Pi Imager 建立）"/>
+
+
+補充SY-DATUM 顯示當天日期
+
+SE38的程式架構本週講的是 selection-screen 的區塊。
+
+ABAP MOVE 小筆記"/>
 
 
 <!--Open Graph Site Name-->
@@ -59,7 +69,7 @@
 
 <!-- Title -->
 
-<title>感測器期中考 | YuZhang的筆記</title>
+<title>ABAP selection-screen | YuZhang的筆記</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -128,7 +138,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
                 <div class="post-heading text-white">
-                    <h1>感測器期中考</h1>
+                    <h1>ABAP selection-screen</h1>
                     
                 </div>
             </div>
@@ -148,7 +158,7 @@
         <i class="far fa-bookmark fa-fw"></i>
         
 
-<a href="/categories/%E6%84%9F%E6%B8%AC%E5%99%A8/">感測器</a>
+<a href="/categories/SAP-ABAP/">SAP ABAP</a>
 
     
     
@@ -156,106 +166,123 @@
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-calendar-check fa-fw"></i>
-        2025-04-22
+        2025-05-05
     
     <!-- word count and read count -->
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-file-word fa-fw"></i>
-        774
+        816
     
 
     
         <span class="post-meta-split">&nbsp;|&nbsp;</span>
         <i class="far fa-clock fa-fw"></i>
-        2 Minutes
+        3 Minutes
     
 
     
 </span>  
                 
-                <h1 id="🧠-感測器實作期中考重點總整理"><a href="#🧠-感測器實作期中考重點總整理" class="headerlink" title="🧠 感測器實作期中考重點總整理"></a>🧠 感測器實作期中考重點總整理</h1><h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><p>這是chatGPT生成的，我今天第一次買Plus</p>
+                <h3 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h3><blockquote>
+<p>本堂課為高科大智慧商務系的大二選修：ABAP程式設計<br>感謝github copilot的gpt 4o生成markdown格式，但截圖還是得我自己補上</p>
+</blockquote>
+<br>
+
+<h3 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h3><p>SY-DATUM 顯示當天日期</p>
 <hr>
-<h2 id="📌-Raspberry-Pi-環境設定"><a href="#📌-Raspberry-Pi-環境設定" class="headerlink" title="📌 Raspberry Pi 環境設定"></a>📌 Raspberry Pi 環境設定</h2><ul>
-<li>樹莓派為基於 Linux 的單板電腦，本課程使用 <strong>Raspberry Pi 3 Model B</strong></li>
-<li>開機需要 SD 卡（可使用 Raspberry Pi Imager 建立）</li>
-<li>預設帳密：<code>pi / raspberry</code></li>
-<li>可透過 MobaXterm 使用 <strong>SSH</strong> 遠端連線；<strong>VNC Viewer</strong> 可圖形介面操作</li>
-</ul>
+<h3 id="SE38的程式架構"><a href="#SE38的程式架構" class="headerlink" title="SE38的程式架構"></a>SE38的程式架構</h3><p>本週講的是 selection-screen 的區塊。</p>
 <hr>
-<h2 id="🟢-GPIO-與-LED-Button-控制"><a href="#🟢-GPIO-與-LED-Button-控制" class="headerlink" title="🟢 GPIO 與 LED &#x2F; Button 控制"></a>🟢 GPIO 與 LED &#x2F; Button 控制</h2><ul>
-<li>GPIO：<strong>General Purpose Input&#x2F;Output</strong></li>
-<li>GPIO 可設為 <code>Input</code> &#x2F; <code>Output</code> &#x2F; <code>Alternate Function</code></li>
-<li>控制 LED 需搭配 <strong>電阻與杜邦線</strong> 接在麵包板上</li>
-<li><code>GPIO.setmode(GPIO.BOARD)</code> 表示以實體腳位編號為準</li>
-<li><strong>PWM（Pulse Width Modulation）</strong>：脈波寬度調變，用於產生類比效果（例如呼吸燈）</li>
+<h3 id="ABAP-MOVE-小筆記"><a href="#ABAP-MOVE-小筆記" class="headerlink" title="ABAP MOVE 小筆記"></a>ABAP MOVE 小筆記</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOVE A TO B.  &quot; A 的值搬到 B。</span><br></pre></td></tr></table></figure>
+
+<p><strong>為什麼不直接使用 &#x3D; 就好了?</strong></p>
+<ul>
+<li>早期 ABAP 沒有 <code>=</code>，只能用 <code>MOVE</code>。</li>
+<li><code>MOVE</code> 可以順便做型別轉換，比 <code>=</code> 更保險。</li>
+<li>現在簡單情況可以用 <code>=</code>，但正式寫法還是習慣用 <code>MOVE</code>。</li>
+<li>兩邊型別不同時，建議用 <code>MOVE</code> 比較安全。</li>
 </ul>
-<h3 id="💡-電壓與電流"><a href="#💡-電壓與電流" class="headerlink" title="💡 電壓與電流"></a>💡 電壓與電流</h3><ul>
-<li>電壓（Volt, V）：電位差</li>
-<li>電流（Ampere, A）：電子流動量</li>
-<li>電阻（Ohm, Ω）：阻礙電流流動的能力<br>👉 歐姆定律：<strong>V &#x3D; I × R</strong></li>
-</ul>
+<p>範例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA: g_char TYPE c LENGTH 11 VALUE &#x27;hello world&#x27;,</span><br><span class="line">    g_char2 TYPE c LENGTH 10.</span><br><span class="line"></span><br><span class="line">MOVE g_char TO g_char2.</span><br><span class="line"></span><br><span class="line">WRITE g_char.</span><br><span class="line">WRITE g_char2.</span><br></pre></td></tr></table></figure>
+
+<p><strong>顯示結果</strong>:<br><code>g_char</code> 長度是 11，<code>g_char2</code> 長度是 10，<code>g_char2</code> 被截斷了。</p>
 <hr>
-<h2 id="🔊-蜂鳴器"><a href="#🔊-蜂鳴器" class="headerlink" title="🔊 蜂鳴器"></a>🔊 蜂鳴器</h2><ul>
-<li>分為 <strong>有源</strong>（Active）與 <strong>無源</strong>（Passive）蜂鳴器<ul>
-<li>有源：通電即響，內建震盪器</li>
-<li>無源：須提供 PWM 方波才能響</li>
-</ul>
-</li>
-<li>音調控制：改變頻率與週期可產生不同聲音</li>
-<li>音樂播放：可依照音階頻率改變來演奏旋律</li>
-</ul>
+<h3 id="創新檔-Z-TRAINING-0430"><a href="#創新檔-Z-TRAINING-0430" class="headerlink" title="創新檔 Z_TRAINING_0430"></a>創新檔 Z_TRAINING_0430</h3><p>用來定義報表程式中的單一輸入欄位：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PARAMETERS pId TYPE ZTICKET_LOG-PASSENGER_ID.</span><br></pre></td></tr></table></figure>
+
+<p><strong>顯示結果</strong>:<br>顯示 PID 怎麼會知道它是什麼東西？<br>可以點選上方 <strong>Go to -&gt; Text element -&gt; Selection Texts -&gt; DDIC Reference</strong> 勾選，看起來直覺多了，但如果不是想要名稱的也可以自己改。</p>
 <hr>
-<h2 id="🌈-光敏電阻-雨滴感測器-土壤濕度"><a href="#🌈-光敏電阻-雨滴感測器-土壤濕度" class="headerlink" title="🌈 光敏電阻 &#x2F; 雨滴感測器 &#x2F; 土壤濕度"></a>🌈 光敏電阻 &#x2F; 雨滴感測器 &#x2F; 土壤濕度</h2><ul>
-<li><strong>光敏電阻</strong>：光越強，電阻越小，電壓變化可做為輸出</li>
-<li><strong>雨滴感測器</strong>：無水 → 高電位，有水 → 低電位</li>
-<li><strong>土壤濕度感測器</strong>：濕 → 導電性強 → 電阻小，乾 → 電阻大</li>
-</ul>
+<h3 id="DEFAULT-設定欄位預設值"><a href="#DEFAULT-設定欄位預設值" class="headerlink" title="DEFAULT 設定欄位預設值"></a>DEFAULT 設定欄位預設值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PARAMETERS pId TYPE ZTICKET_LOG-PASSENGER_ID DEFAULT &#x27;1&#x27;.</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="📏-超聲波感測器（HC-SR04）"><a href="#📏-超聲波感測器（HC-SR04）" class="headerlink" title="📏 超聲波感測器（HC-SR04）"></a>📏 超聲波感測器（HC-SR04）</h2><ul>
-<li>可量測距離範圍：約 <strong>2cm ~ 400cm</strong></li>
-<li>原理：發送超聲波 → 偵測回波時間 → 根據聲速計算距離<ul>
-<li>距離(cm) &#x3D; 時間 × 聲速 &#x2F; 2</li>
-<li>聲速 &#x3D; <code>331 + 0.6 × 溫度</code></li>
-</ul>
-</li>
-</ul>
+<h3 id="OBLIGATORY-設為必填"><a href="#OBLIGATORY-設為必填" class="headerlink" title="OBLIGATORY 設為必填"></a>OBLIGATORY 設為必填</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PARAMETERS pId2 TYPE ZTICKET_LOG-PASSENGER_ID OBLIGATORY.</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="🧱-Thread-vs-Process-執行緒與程序"><a href="#🧱-Thread-vs-Process-執行緒與程序" class="headerlink" title="🧱 Thread vs Process (執行緒與程序)"></a>🧱 Thread vs Process (執行緒與程序)</h2><h3 id="Thread-線程"><a href="#Thread-線程" class="headerlink" title="Thread (線程)"></a>Thread (線程)</h3><ul>
-<li>較輕量，屬於 process 的一部分，共享記憶體與資源</li>
-<li>多執行緒需使用 <strong>Lock 鎖定</strong> 避免資源競爭</li>
-<li>低 context switching 成本</li>
-</ul>
-<h3 id="Process-程序"><a href="#Process-程序" class="headerlink" title="Process (程序)"></a>Process (程序)</h3><ul>
-<li>較重，記憶體獨立，需額外機制（如 shared memory）溝通</li>
-<li>適合多核心運算，缺點是溝通成本高、資源需求大</li>
-</ul>
-<h3 id="Python-限制：GIL（Global-Interpreter-Lock）"><a href="#Python-限制：GIL（Global-Interpreter-Lock）" class="headerlink" title="Python 限制：GIL（Global Interpreter Lock）"></a>Python 限制：<strong>GIL（Global Interpreter Lock）</strong></h3><ul>
-<li>單執行緒限制，Python 在多執行緒下效能受限</li>
-</ul>
+<h3 id="CHECKBOX-多選方塊"><a href="#CHECKBOX-多選方塊" class="headerlink" title="CHECKBOX 多選方塊"></a>CHECKBOX 多選方塊</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PARAMETERS: p_check1 AS CHECKBOX DEFAULT &#x27;X&#x27; USER-COMMAND uc1,</span><br><span class="line">        p_check2 AS CHECKBOX DEFAULT &#x27; &#x27; USER-COMMAND uc2.</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="📺-SPI-傳輸協定與-TFT-LCD"><a href="#📺-SPI-傳輸協定與-TFT-LCD" class="headerlink" title="📺 SPI 傳輸協定與 TFT LCD"></a>📺 SPI 傳輸協定與 TFT LCD</h2><ul>
-<li>SPI（Serial Peripheral Interface）：全雙工、高速、主從式傳輸</li>
-<li>常見腳位：<code>MOSI</code>、<code>MISO</code>、<code>SCLK</code>、<code>CS</code></li>
-<li>SPI 比 I²C 更高速但需更多線路</li>
-</ul>
-<h3 id="LCD-模組（ILI9341）"><a href="#LCD-模組（ILI9341）" class="headerlink" title="LCD 模組（ILI9341）"></a>LCD 模組（ILI9341）</h3><ul>
-<li>使用 <strong>4線式 SPI</strong></li>
-<li>支援繪圖、顯示圖片與文字（搭配 <code>Pillow</code> 套件）</li>
-<li>可搭配觸控功能（需額外驅動與接線設定）</li>
-</ul>
+<h3 id="RADIO-單選方塊"><a href="#RADIO-單選方塊" class="headerlink" title="RADIO 單選方塊"></a>RADIO 單選方塊</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PARAMETERS: p_radio1 RADIOBUTTON GROUP grp DEFAULT &#x27;X&#x27;,</span><br><span class="line">        p_radio2 RADIOBUTTON GROUP grp.</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="📡-I²C-傳輸與感測器整合"><a href="#📡-I²C-傳輸與感測器整合" class="headerlink" title="📡 I²C 傳輸與感測器整合"></a>📡 I²C 傳輸與感測器整合</h2><ul>
-<li>I²C 為兩線式通訊：<code>SDA</code>（資料）、<code>SCL</code>（時脈）</li>
-<li>Master-slave 結構，每個裝置需有唯一地址</li>
-<li>優點：支援多設備、線路簡單；缺點：速度較慢</li>
-<li>常見應用：<strong>LM75A 溫度感測器</strong>、<strong>MPU-6050（加速度 + 陀螺儀）</strong></li>
-</ul>
+<h3 id="SELECT-OPTIONS-範圍輸入欄位"><a href="#SELECT-OPTIONS-範圍輸入欄位" class="headerlink" title="SELECT-OPTIONS 範圍輸入欄位"></a>SELECT-OPTIONS 範圍輸入欄位</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TABLES: ZTICKET_LOG.</span><br><span class="line">SELECT-OPTIONS S_DATUM FOR ZTICKET_LOG-BDATE.</span><br></pre></td></tr></table></figure>
+
+<p>建立 SELECT-OPTIONS 後會自動建立一個內表，結構如下：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>欄位名稱</th>
+<th>意義</th>
+<th>簡單說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ROW</td>
+<td>行號</td>
+<td>通常系統內部使用，顯示這筆是第幾行。</td>
+</tr>
+<tr>
+<td>SIGN</td>
+<td>包含&#x2F;排除 (I&#x2F;E)</td>
+<td><code>I</code> (Include) 是要包含，<code>E</code> (Exclude) 是要排除。</td>
+</tr>
+<tr>
+<td>OPTION</td>
+<td>條件符號</td>
+<td>像是 <code>EQ</code> (&#x3D;)、<code>NE</code> (≠)、<code>BT</code> (Between)… 等條件。</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>低值</td>
+<td>條件的起始值或單一值。</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>高值</td>
+<td>條件的結束值（通常只有 BETWEEN 類型才會用到）。</td>
+</tr>
+</tbody></table>
 <hr>
-<h2 id="🧠-小提醒"><a href="#🧠-小提醒" class="headerlink" title="🧠 小提醒"></a>🧠 小提醒</h2><ul>
-<li>每種感測器通常會有一個 <strong>D0（數位）</strong> 與 <strong>A0（類比）</strong> 輸出腳位（如有支援）</li>
-<li>雖然不考程式碼，但了解感測器如何回傳訊號（高電位 &#x2F; 低電位）非常關鍵</li>
-<li>考試以 <strong>選擇題為主</strong>，可多練習判斷感測器行為與輸出特性</li>
+<h3 id="預設欄位符合今天日期"><a href="#預設欄位符合今天日期" class="headerlink" title="預設欄位符合今天日期"></a>預設欄位符合今天日期</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT-OPTIONS S_DATUM FOR ZTICKET_LOG-BDATE DEFAULT SY-DATUM.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="抓資料範例"><a href="#抓資料範例" class="headerlink" title="抓資料範例"></a>抓資料範例</h3><p>從資料表 <code>ZTICKET_LOG</code> 找出符合日期條件的資料，然後一筆一筆拿出來，把特定欄位的內容印出來。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DATA GT_ZTICKET_LOG LIKE ZTICKET_LOG OCCURS 0 WITH HEADER LINE.</span><br><span class="line">DATA GS_ZTICKET_LOG LIKE ZTICKET_LOG.</span><br><span class="line"></span><br><span class="line">SELECT * INTO TABLE GT_ZTICKET_LOG</span><br><span class="line">  FROM ZTICKET_LOG</span><br><span class="line">  WHERE BDATE IN S_DATUM.</span><br><span class="line"></span><br><span class="line">LOOP AT GT_ZTICKET_LOG INTO GS_ZTICKET_LOG.</span><br><span class="line">  WRITE: /, GS_ZTICKET_LOG-PASSENGER_ID,</span><br><span class="line">       /, GS_ZTICKET_LOG-TICKET_ID,</span><br><span class="line">       /, GS_ZTICKET_LOG-BDATE,</span><br><span class="line">       /, GS_ZTICKET_LOG-GDATE.</span><br><span class="line">ENDLOOP.</span><br></pre></td></tr></table></figure>
+
+<p><strong>範例</strong>: 假如日期設為 2025&#x2F;01&#x2F;01 到 2025&#x2F;12&#x2F;31，會抓到符合時間範圍的資料。</p>
+<hr>
+<h3 id="SELECT-SINGLE"><a href="#SELECT-SINGLE" class="headerlink" title="SELECT SINGLE"></a>SELECT SINGLE</h3><p>通常用來找主鍵之類的唯一值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TABLES: ZTICKET_LOG.</span><br><span class="line"></span><br><span class="line">SELECT SINGLE * INTO GS_ZTICKET_LOG</span><br><span class="line">  FROM ZTICKET_LOG</span><br><span class="line">  WHERE PASSENGER_ID EQ pId.</span><br><span class="line"></span><br><span class="line">WRITE: /, GS_ZTICKET_LOG-PASSENGER_ID,</span><br><span class="line">     /, GS_ZTICKET_LOG-TICKET_ID,</span><br><span class="line">     /, GS_ZTICKET_LOG-BDATE,</span><br><span class="line">     /, GS_ZTICKET_LOG-GDATE.</span><br></pre></td></tr></table></figure>
+
+<p><strong>範例</strong>: 搜尋乘客 <code>001</code> 是否有買過票，若有則顯示第一筆票資料。</p>
+<hr>
+<h3 id="找出某乘客所有票資料"><a href="#找出某乘客所有票資料" class="headerlink" title="找出某乘客所有票資料"></a>找出某乘客所有票資料</h3><p>只挑出票號、買票日、搭車日這三樣資訊存起來，然後一筆一筆拿出來印出來。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">DATA: BEGIN OF GT_ZTICKET OCCURS 0,</span><br><span class="line">      TID LIKE ZTICKET_LOG-TICKET_ID,</span><br><span class="line">      BDATE LIKE ZTICKET_LOG-BDATE,</span><br><span class="line">      GDATE LIKE ZTICKET_LOG-GDATE,</span><br><span class="line">    END OF GT_ZTICKET.</span><br><span class="line"></span><br><span class="line">SELECT * INTO CORRESPONDING FIELDS OF TABLE GT_ZTICKET</span><br><span class="line">  FROM ZTICKET_LOG</span><br><span class="line">  WHERE PASSENGER_ID EQ PID.</span><br><span class="line"></span><br><span class="line">LOOP AT GT_ZTICKET.</span><br><span class="line">  WRITE: /, GT_ZTICKET-TID,</span><br><span class="line">       /, GT_ZTICKET-BDATE,</span><br><span class="line">       /, GT_ZTICKET-GDATE.</span><br><span class="line">ENDLOOP.</span><br></pre></td></tr></table></figure>
+
+<p><strong>為什麼要自己設計小表格？</strong></p>
+<ul>
+<li>不需要全部欄位，可以減少記憶體負擔、加快速度。</li>
+<li><code>CORRESPONDING FIELDS OF TABLE</code>：只對得上名字的欄位才放進去，其他忽略。</li>
 </ul>
 
             </div>
@@ -266,10 +293,8 @@
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
         <ul class="pagination d-block text-center">
             
-                <li class="previous page-item d-inline"><a href="/2025/04/24/AI/" class="page-link float-left">&larr;  下一頁</a></li>
             
-            
-                <li class="next page-item d-inline"><a href="/2024/12/21/git-reset/" class="page-link float-right">上一頁  &rarr;</a></li>
+                <li class="next page-item d-inline"><a href="/2025/04/24/AI/" class="page-link float-right">上一頁  &rarr;</a></li>
             
         </ul>
     </div>
